@@ -2,6 +2,7 @@
 
 [Project page](https://github.com/oncescuandreea/DTU_text_audio) | [arXiv](https://openreview.net/pdf?id=HTZy9hpoYV)
 
+![Teaser](teaser_again.png)
 
 ## Downloading pre-trained models needed for experiments:
 Download HTSAT.ckp model from [here](https://drive.google.com/drive/folders/1ZaYERuMMLLgu4oHTl47FcippLFboaGq5). Put it under ```retrieval/pretrained_models/audio_encoders```. More information can be found [here](https://github.com/XinhaoMei/WavCaps/tree/master/retrieval).
