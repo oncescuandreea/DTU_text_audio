@@ -352,7 +352,7 @@ def main():
 
     main_logger.info("Evaluation start...")
     names_test_sets = {
-        "NewDataset": ["test", "test_reverse", "test_replaced"],
+        "SynCaps": ["test", "test_reverse", "test_replaced"],
         "AudioCaps": [
             "test_audioset_1_rearranged",
             "test_audioset_1_rearranged_future_past",

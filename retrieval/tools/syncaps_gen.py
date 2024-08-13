@@ -315,7 +315,7 @@ def main():
             category_to_filename[category.replace("_", " ")].append(filename)
 
     # Load the json file containing the class name and the GPT generated potential description
-    with open("../NewDataset/class_to_desc_gpt4.json", "r") as f:
+    with open("../SynCaps/class_to_desc_gpt4.json", "r") as f:
         category_to_description = json.load(f)
 
     with open(path_to_save_audios / "audio_to_extra_info.json", "r") as f:

@@ -51,7 +51,7 @@ class AudioCaptionDataset(Dataset):
         else:
             raise ValueError("Incorrect num_captions_per_audio.")
 
-        if dataset in ["AudioCaps", "NewDataset"]:
+        if dataset in ["AudioCaps", "SynCaps"]:
             with open(
                 f"data/{dataset}/json_files/audio_id_to_pos_neg_eg.json",
                 "r",

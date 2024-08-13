@@ -86,7 +86,7 @@ Checkpoints used in the paper can be found [here](https://drive.google.com/drive
 To run training experiments on SynCaps, from the ```retrieval``` folder run:
 
 ```
-python train.py --config settings/train_newdataset.yaml --exp_name syncaps_train --lambda_new_loss 0 --seed 19
+python train.py --config settings/train_syncaps.yaml --exp_name syncaps_train --lambda_new_loss 0 --seed 19
 ```
 
 ## Evaluating

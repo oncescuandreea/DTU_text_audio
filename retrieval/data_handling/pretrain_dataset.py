@@ -164,7 +164,7 @@ def pretrain_dataloader(
     dataset = AudioLanguagePretrainDataset(
         config["json_files"], config["audio_args"], config["blacklist"]
     )
-    if "NewDataset" in config["json_files"][0]:
+    if "SynCaps" in config["json_files"][0]:
         print("using extra collate fn")
         collate_fn_fct = collate_fn_extra
     else:

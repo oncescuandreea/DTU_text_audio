@@ -207,16 +207,16 @@ def main():
     # load evaluation datamodule
     ac_datamodule = AudioCaptionDataModule(config, "AudioCaps")
     clotho_datamodule = AudioCaptionDataModule(config, "Clotho")
-    newdataset_datamodule = AudioCaptionDataModule(config, "NewDataset")
+    syncaps_datamodule = AudioCaptionDataModule(config, "SynCaps")
 
     ac_val_loader = ac_datamodule.val_dataloader()
     clotho_val_loader = clotho_datamodule.val_dataloader()
-    newdataset_val_loader = newdataset_datamodule.val_dataloader()
+    syncaps_val_loader = syncaps_datamodule.val_dataloader()
 
     loss_stats = []
     ac_recall_stats = []
     clotho_recall_stats = []
-    newdataset_recall_stats = []
+    syncaps_recall_stats = []
 
     for epoch in range(start_epoch, max_epoch + 1):
         main_logger.info(f"Training for epoch [{epoch}]")
@@ -263,23 +263,20 @@ def main():
             dist.barrier()
             torch.cuda.empty_cache()
 
-        # validate on NewDataset and AudioCaps
-        newdataset_metrics = validate_one(model, newdataset_val_loader, device)
-        log_results(newdataset_metrics, "NewDataset", main_logger, test=False)
-        newdataset_recall_stats.append(
-            newdataset_metrics["t2a"][0] + newdataset_metrics["a2t"][0]
+        # validate on SynCaps and AudioCaps
+        syncaps_metrics = validate_one(model, syncaps_val_loader, device)
+        log_results(syncaps_metrics, "SynCaps", main_logger, test=False)
+        syncaps_recall_stats.append(
+            syncaps_metrics["t2a"][0] + syncaps_metrics["a2t"][0]
         )
-        if (
-            newdataset_recall_stats[-1] >= max(newdataset_recall_stats)
-            and is_main_process()
-        ):
+        if syncaps_recall_stats[-1] >= max(syncaps_recall_stats) and is_main_process():
             sav_obj = {
                 "model": model_without_ddp.state_dict(),
                 "optimizer": optimizer.state_dict(),
                 "config": config,
                 "epoch": epoch,
             }
-            torch.save(sav_obj, str(model_output_dir) + "/newdataset_best_model.pt")
+            torch.save(sav_obj, str(model_output_dir) + "/syncaps_best_model.pt")
 
         # validate on AC and Clotho
         ac_metrics = validate(model, ac_val_loader, device)
