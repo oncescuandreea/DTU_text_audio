@@ -12,7 +12,7 @@ Alternatively, use the code below.
 ```
 cd retrieval
 mkdir -p pretrained_models/audio_encoder
-gdown pretrained_models/audio_encoder/HTSAT.ckpt "https://drive.google.com/uc?id=11XiCDsW3nYJ6uM87pvP3wI3pDAGhsBC1"
+gdown --output pretrained_models/audio_encoder/HTSAT.ckpt "https://drive.google.com/uc?id=11XiCDsW3nYJ6uM87pvP3wI3pDAGhsBC1"
 ```
 
 Then, download the pre-trained WavCaps model.
