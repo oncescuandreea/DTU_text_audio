@@ -1,6 +1,6 @@
 # Dissecting Temporal Understanding in Text-to-Audio Retrieval
 
-[Project page](https://github.com/oncescuandreea/DTU_text_audio) | [arXiv](https://openreview.net/pdf?id=HTZy9hpoYV)
+[Project page](https://www.robots.ox.ac.uk/~vgg/research/audio-retrieval/dtu/) | [arXiv](https://arxiv.org/abs/2409.00851)
 
 ![Teaser](teaser_again.png)
 
@@ -117,7 +117,7 @@ If you find our work useful, please consider citing our paper and the other rele
 
 ```bibtex
 @InProceedings{Oncescu24,
-  author       = {Andreea-Maria Oncescu and Joao~F. Henriques and A. Sophia Koekpe},
+  author       = {Andreea-Maria Oncescu and Joao~F. Henriques and A. Sophia Koepke},
   title        = {Dissecting Temporal Understanding in Text-to-Audio Retrieval},
   booktitle    = {ACM International Conference on Multimedia},
   month        = oct,
