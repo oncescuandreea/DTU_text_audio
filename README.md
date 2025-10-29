@@ -37,9 +37,7 @@
 
 ```bash
 conda env create -f environment.yml
-conda activate egovlp
-python -m nltk.downloader stopwords
-export PYTHONPATH=.
+conda activate pt39
 ```
 
 ---
