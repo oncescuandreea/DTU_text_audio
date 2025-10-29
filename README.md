@@ -209,7 +209,6 @@ If you find our work useful, please cite the following:
   author       = {Andreea-Maria Oncescu and Joao~F. Henriques and A. Sophia Koepke},
   title        = {Dissecting Temporal Understanding in Text-to-Audio Retrieval},
   booktitle    = {ACM International Conference on Multimedia},
-  month        = oct,
   year         = {2024},
   doi          = {https://doi.org/10.1145/3664647.3681690},
 }
