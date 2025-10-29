@@ -1,4 +1,4 @@
-# 🎧 Dissecting Temporal Understanding in Text-to-Audio Retrieval
+# 🎧 Dissecting Temporal Understanding in Text-to-Audio Retrieval [ACM Multimedia 2024]
 
 [![Project](https://img.shields.io/badge/Project_Page-Visit-blue)](https://github.com/oncescuandreea/DTU_text_audio/)
 [![Webpage](https://img.shields.io/badge/🌐_Webpage-Visit-9cf?logo=google-chrome&logoColor=white)](https://www.robots.ox.ac.uk/~vgg/research/audio-retrieval/dtu/)
